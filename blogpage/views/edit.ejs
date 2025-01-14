@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit you post</title>
+</head>
+<body>
+    <h1><%=blog.theme%></h1> 
+    <img style="height: 200px; width: 500px;" src="<%=blog.src%>" alt="image.png"/>
+    <br>
+    <span>edit your blog
+    <br>
+     <form method="post" action="/blog/<%=blog.id%>?_method=PATCH">
+      <textarea rows="30" cols="50" name="text"></textarea>
+       </span>
+       <br>
+       <button>submit</button>
+    </form>
+</body>
+</html>

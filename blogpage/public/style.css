@@ -1,0 +1,28 @@
+/* .card-container{
+    height: 700px;
+    width:300px;
+
+}
+
+.card-img{
+    height: 250px;
+    width: 240px;
+}
+h5,h3{
+    margin-top: 3px;
+}
+h5{
+    padding-bottom: 30px;
+} */
+.card{
+   border-radius: 50px;
+   background-color: black;
+}
+.blog{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+button{
+    padding-bottom: 10px;
+}

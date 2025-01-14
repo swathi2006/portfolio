@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blogging craze</title>
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+    <h1>Blogging Craze</h1>
+   <div class="blog" style="display: flex;"> <%for(blog of blogs){%>
+  
+        <div class="card" style="width:20rem; margin-top: 5px;border-radius: 0px; background-color:antiquewhite; border: none;">
+        <img class="card-img"  style="height: 300px;"src="<%=blog.src%>" alt=" "/>
+           <div class="card-body">
+             <h3 class="card-title"><%=blog.theme%></h3>
+               <h5 class="card-text"><%= blog.content_index%></h5>
+            </div>
+            
+         <a style="text-decoration: none; " href="http://localhost:2006/blog/<%=blog.id%>" >open blog</a>
+
+         <form    method="post" action="/blog/<%=blog.id%>?_method=DELETE">
+    <button style="margin-left: 300px; border: none; color: blue;" >Delete</button>
+    </form>
+
+          
+        </div>
+      <% }%>
+   </div>
+   <a href="http://localhost:2006/blog/new">create your blog</a>
+  
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+ 
+</body>
+</html>
