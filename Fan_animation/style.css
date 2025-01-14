@@ -1,0 +1,75 @@
+.center{
+    height:60px;
+    width:60px;
+    background:brown;
+    position:relative;
+    left:50%;
+    top:250px;
+    border-radius:50%;
+}
+
+.checkbox-label{
+    background-color:red;
+  height:30px;
+  width:80px;
+text-align:center;
+padding-top:10px;
+   position:absolute;
+   border-radius:20px;
+   
+
+
+}
+
+
+#fan-toggle{
+    display:none;
+}
+
+
+.wing1,.wing2,.wing3,.wing4{
+    height:40px;
+    width:140px;
+    background:brown;
+    border-radius:20px;
+    position:absolute;
+
+}
+
+.wing1{
+    transform:rotate(90deg);
+    top:100px;
+    left:-40px
+
+}
+
+.wing2{
+    transform:rotate(90deg);
+    top:-70px;
+    left:-40px;
+}
+
+.wing3{
+    top:10px;
+    left:45px
+}
+
+.wing4{
+    right:45px;
+    top:10px;
+}
+
+.toggle:checked+.checkbox-label+.center{
+    animation:motion 1s  infinite linear ;
+}
+
+@keyframes motion{
+    from{
+        
+        transform: rotate(0deg) ;
+    }
+    to{
+        
+        transform: rotate(360deg) ;
+    }
+}
